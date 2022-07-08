@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="664.0" prefWidth="547.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AddPartFormController">
+   <children>
+      <Text layoutX="60.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Part">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <RadioButton fx:id="addPartInHouseBtn" layoutX="162.0" layoutY="54.0" mnemonicParsing="false" onAction="#AddRadioSelected" selected="true" text="In-House">
+         <toggleGroup>
+            <ToggleGroup fx:id="AddPartRadio" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="addPartOutsourcedBtn" layoutX="265.0" layoutY="54.0" mnemonicParsing="false" onAction="#AddRadioSelected" text="Outsourced" toggleGroup="$AddPartRadio" />
+      <VBox layoutX="60.0" layoutY="125.0" prefHeight="302.0" prefWidth="145.0" spacing="15.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ID" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Inv" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Price/Cost" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Max" />
+            <Text fx:id="MachineOrCompanyName" strokeType="OUTSIDE" strokeWidth="0.0" text="Machine ID" />
+         </children>
+      </VBox>
+      <VBox layoutX="162.0" layoutY="125.0" prefHeight="200.0" prefWidth="134.0" spacing="5.0">
+         <children>
+            <TextField fx:id="AddPartID" editable="false" opacity="0.5" text="Auto Gen- Disabled" />
+            <TextField fx:id="AddPartName" />
+            <TextField fx:id="AddPartInv" />
+            <TextField fx:id="AddPartPrice" />
+            <TextField fx:id="AddPartMax" />
+            <TextField fx:id="AddMachineOrCompanyTextField" />
+         </children>
+      </VBox>
+      <VBox layoutX="334.0" layoutY="125.0" prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Min" />
+         </children>
+         <padding>
+            <Insets top="125.0" />
+         </padding>
+      </VBox>
+      <VBox layoutX="384.0" layoutY="125.0" prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <TextField fx:id="AddPartMin">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets top="120.0" />
+               </VBox.margin>
+            </TextField>
+         </children>
+      </VBox>
+      <Button fx:id="addPartSaveBtn" layoutX="308.0" layoutY="361.0" mnemonicParsing="false" onAction="#AddPartSaveButton" text="Save" />
+      <Button fx:id="PartCancelBtn" layoutX="384.0" layoutY="361.0" mnemonicParsing="false" onAction="#AddPartCancelBtn" text="Cancel" />
+   </children>
+</AnchorPane>
